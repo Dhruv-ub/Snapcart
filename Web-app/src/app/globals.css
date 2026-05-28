@@ -2,9 +2,12 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-
+@source "../app"; /* Or wherever your deals.tsx and nav.tsx live */
+@source "../components";
+@source "../pages";
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+

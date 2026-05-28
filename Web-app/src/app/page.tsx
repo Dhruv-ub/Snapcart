@@ -7,6 +7,7 @@ import GeoUpdater from '@/components/GeoUpdater'
 
 import Nav from '@/components/Nav'
 import UserDashboard from '@/components/UserDashboard'
+import Stories from '@/components/Stories'
 import connectDb from '@/lib/db'
 import Grocery, { IGrocery } from '@/models/grocery.model'
 
@@ -26,10 +27,10 @@ const searchParams=await props.searchParams
 
   await connectDb()
   const session = await auth()
-  if (!session) redirect("/login")
+  if (!session) redirect("/register")
   console.log(session?.user)
   const user = await User.findById(session?.user?.id)
- if (!user) redirect("/login")
+ if (!user) redirect("/register")
 
   const inComplete = !user.mobile || !user.role || (!user.mobile && user.role == "user")
   if (inComplete) {
@@ -66,6 +67,7 @@ if(user.role==="user"){
       ) : user.role == "admin" ? (
         <AdminDashboard />
       ) : <DeliveryBoy />}
+      <Stories/>
       <Footer/>
     </>
   )
