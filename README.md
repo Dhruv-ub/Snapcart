@@ -163,7 +163,7 @@ Dual authentication via email/password credentials and Google OAuth, backed by N
 
 Secure delivery personnel login with role-scoped session management, granting access to assignment queues, GPS-enabled order workflows, and real-time dispatch coordination.
 
-![Delivery Partner Authentication](images/delivery-boy-login.png)
+<!-- ![Delivery Partner Authentication](images/delivery-boy-login.png) -->
 
 ### Categories Page
 
